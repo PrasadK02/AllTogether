@@ -1,0 +1,17 @@
+
+<div class="card text-center" style="width: 32rem; margin: 170px auto;">
+    <div class="card-body" >
+      <div class="cart-title">
+        <h2>Typing</h2>
+        <p>
+          <span *ngFor="let letter of textData.split(''); let i = index;" [class]="compare(letter, enteredText[i])">
+          {{letter}}
+      </span>
+    </p>
+        <div class="mb-4" >
+            <input type="text" class="form-control" #input (keyup)="onInput(input.value)" autofocus>
+          </div>
+      </div>
+      
+    </div>
+  </div>
